@@ -1,7 +1,8 @@
 'use strict';
 
-function MainCtrl($scope, $http) {
- 	$http.get("charts/basicAreaChart.json").success(function(data) {
-    	$scope.basicAreaChart = data;
-	});
-};
+angular.module('chartsExample.controllers',[]).controller('MainCtrl', ['$scope','$http', 
+	function($scope,$http) {
+ 		$http.get("charts/basicAreaChart.json").success(function(data) {
+    		$scope.basicAreaChart = data;
+		});
+}]);
