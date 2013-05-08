@@ -15,7 +15,7 @@ angular.module('chartsExample.directives',[])
           renderTo: element[0],
           type: attrs.type || null,
           height: attrs.height || null,
-          width: attrs.width || null,
+          width: attrs.width || null
         }
       };
 
