@@ -7,7 +7,8 @@ angular.module('chartsExample.directives',[])
     restrict: 'E',
     template: '<div></div>',
     scope: {
-        chartData: "=value"
+        chartData: "=value",
+        chartObj: "="
     },
     transclude:true,
     replace: true,
@@ -31,7 +32,7 @@ angular.module('chartsExample.directives',[])
             var deepCopy = true;
             var newSettings = {};
             $.extend(deepCopy, newSettings, chartsDefaults, scope.chartData);
-            var chart = new Highcharts.Chart(newSettings);
+            scope.chartObj = new Highcharts.Chart(newSettings);
         });
       }
     }
