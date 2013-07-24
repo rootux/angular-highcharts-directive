@@ -34,6 +34,6 @@ angular.module('chartsExample.directives',[])
             var chart = new Highcharts.Chart(newSettings);
         });
       }
-    }
+    };
 
 });
