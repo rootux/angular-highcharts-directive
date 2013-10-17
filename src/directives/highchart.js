@@ -22,6 +22,8 @@ angular.module('chartsExample.directives',[])
         }
       };
       
+        var resizeAuto = attrs.resizeAuto || "true";
+        
         //Update when charts data changes
         scope.$watch(function() { return scope.chartData; }, function(value) {
           if(!value) return;
@@ -33,6 +35,14 @@ angular.module('chartsExample.directives',[])
             $.extend(deepCopy, newSettings, chartsDefaults, scope.chartData);
             var chart = new Highcharts.Chart(newSettings);
         });
+        
+        if (resizeAuto == "true") {
+            scope.$watch(function(){ return element.width(); }, function(){
+                if(angular.isDefined(chart)) {
+                    chart.setSize(element.width(), element.height(), false);
+                }
+            });
+        }
       }
     };
 
