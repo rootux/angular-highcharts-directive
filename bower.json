@@ -1,0 +1,16 @@
+{
+  "name": "angular-highcharts-directive",
+  "version": "0.3.0",
+  "homepage": "https://github.com/rootux/angular-highcharts-directive",
+  "authors": [
+    "Gal Bracha <galbra@gmail.com>"
+  ],
+  "description": "An angular(http://angularjs.org/) directive that wrappes around http://www.highcharts.com charts, and allows easily and moduler integration of angular and highcharts",
+  "main": "src/directives/highchart.js",
+  "keywords": [
+    "angular",
+    "highcharts",
+    "directive"
+  ],
+  "license": "MIT"
+}
