@@ -29,9 +29,8 @@ angular.module('chartsExample.directives',[])
             // We need deep copy in order to NOT override original chart object.
             // This allows us to override chart data member and still the keep
             // our original renderTo will be the same
-            var deepCopy = true;
             var newSettings = {};
-            $.extend(deepCopy, newSettings, chartsDefaults, scope.chartData);
+            angular.extend(newSettings, chartsDefaults, scope.chartData);
             scope.chartObj = new Highcharts.Chart(newSettings);
         });
       }
