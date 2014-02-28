@@ -6,7 +6,7 @@ angular.module('chartsExample.directives', []).directive('chart', function() {
         template: '<div></div>',
         scope: {
             chartData: "=value",
-            chartObj: "="
+            chartObj: "=?"
         },
         transclude: true,
         replace: true,
