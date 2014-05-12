@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('chartsExample.directives', []).directive('chart', function() {
+angular.module('angularHighcharts', []).directive('chart', function() {
     return {
-        restrict: 'E',
+        restrict: 'AE',
         template: '<div></div>',
         scope: {
             chartData: "=value",
