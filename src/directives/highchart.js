@@ -17,6 +17,9 @@ angular.module('chartsExample.directives', []).directive('chart', function() {
                 if (!value)
                     return;
 
+                // Initiate the chartData.chart if it doesn't exist yet
+                $scope.chartData.chart = $scope.chartData.chart || {};
+
                 // use default values if nothing is specified in the given settings
                 $scope.chartData.chart.renderTo = $scope.chartData.chart.renderTo || $element[0];
                 if ($attrs.type)
