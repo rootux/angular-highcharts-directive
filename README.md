@@ -25,7 +25,3 @@ angular.module('chartsExample.controllers', []).controller('MainCtrl', ['$scope'
     });
 }]);
 ```
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rootux/angular-highcharts-directive/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
